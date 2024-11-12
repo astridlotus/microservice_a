@@ -33,5 +33,9 @@ if response.status_code == 200:
         print("JSON Response:", response.json())  # Print the JSON response from the server
     else:
         print("Error:", response.status_code, response.text)
+        
+![image](https://github.com/user-attachments/assets/4ee514df-1e84-4f60-a28d-8ddc721f4eb4)
+
+        
 
 
