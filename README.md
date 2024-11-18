@@ -16,7 +16,7 @@ HOW TO REQUEST DATA:
 The processes of requesting data is made using the requests module, using
 a known url (endpoint) and body of request
 
-Example:
+Example request in Python:
 
 url = 'http://localhost:3000/upload-csv'
 with open(file_path, 'rb') as file:
