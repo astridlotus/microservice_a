@@ -1,3 +1,8 @@
+SETUP
+
+Run `npm install` to download necessary packages.
+To run the service, enter `node app.js`.
+
 COMMUNICATION CONTRACT
 
 Since this Micro service only includes POST requests, each call includes both
