@@ -99,18 +99,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-//example of how this could be called:
-// import requests
-
-// def upload_csv(file_path):
-//     url = 'http://localhost:3000/upload-csv'
-//     with open(file_path, 'rb') as file:
-//         files = {'file': file}
-//         response = requests.post(url, files=files)
-
-//     if response.status_code == 200:
-//         print("JSON Response:", response.json())
-//     else:
-//         print("Error:", response.status_code, response
