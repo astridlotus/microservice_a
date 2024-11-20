@@ -18,14 +18,25 @@ a known url (endpoint) and body of request
 
 Example request in Python:
 
+```python
+import requests
+
+
 url = 'http://localhost:3000/upload-csv'
+file_path = "sample_data.csv"
+
 with open(file_path, 'rb') as file:
-        # The file is sent in the 'file' field as a multipart form-data
-        files = {'file': file}
+    # The file is sent in the 'file' field as a multipart form-data
+    files = {'file': file}
 
-        # Send a POST request to the API Gateway with the file
-        response = requests.post(url, files=files)
+    # Send a POST request to the API Gateway with the file
+    response = requests.post(url, files=files)
 
+    if response.status_code == 200:
+        print("JSON Response:", response.json())
+    else:
+        print("Error:", response.status_code, response
+```
 
 HOW TO RECEIVE DATA:
 
