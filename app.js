@@ -5,8 +5,14 @@ const { parse } = require('json2csv');  // Import the parse function from json2c
 const fs = require('fs');
 const path = require('path');
 
+const cors = require('cors');
+const corsOptions = {
+  origin: 'http://localhost:5173'
+}
+
 const app = express();
 app.use(express.json());
+app.use(cors(corsOptions));
 
 
 // Configure Multer for file uploads
