@@ -5,8 +5,14 @@ const { parse } = require('json2csv');  // Import the parse function from json2c
 const fs = require('fs');
 const path = require('path');
 
+const cors = require('cors');
+const corsOptions = {
+  origin: 'http://localhost:5173'
+}
+
 const app = express();
 app.use(express.json());
+app.use(cors(corsOptions));
 
 
 // Configure Multer for file uploads
@@ -99,18 +105,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-//example of how this could be called:
-// import requests
-
-// def upload_csv(file_path):
-//     url = 'http://localhost:3000/upload-csv'
-//     with open(file_path, 'rb') as file:
-//         files = {'file': file}
-//         response = requests.post(url, files=files)
-
-//     if response.status_code == 200:
-//         print("JSON Response:", response.json())
-//     else:
-//         print("Error:", response.status_code, response
