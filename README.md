@@ -1,4 +1,7 @@
 ## SETUP
+A microservice that accepts and sends files for file transformation. Can change files between CSV format and JSON.
+
+## SETUP
 
 Run `npm install` to download necessary packages.
 To run the service, enter `node app.js`.
